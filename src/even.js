@@ -1,11 +1,9 @@
+import promptly from 'promptly';
 import greeting from './cli.js';
-import promptly from "promptly";
 
-const isEven = (number) => {
-  return number % 2 === 0;
-};
+const isEven = (number) => number % 2 === 0;
 
-export const run = async () => {
+const run = async () => {
   const name = await greeting();
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -18,7 +16,7 @@ export const run = async () => {
     const correctAnswer = isEven(question) ? 'yes' : 'no';
     const answer = await promptly.prompt('Your answer: ');
 
-    if (answer != correctAnswer) {
+    if (answer !== correctAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
@@ -28,5 +26,6 @@ export const run = async () => {
   }
 
   console.log(`Congratulations, ${name}!`);
-  return;
 };
+
+export default run;
