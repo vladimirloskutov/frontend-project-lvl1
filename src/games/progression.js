@@ -3,7 +3,7 @@ import runGame from '../index.js';
 const getProgression = () => {
   const progressionLength = 10;
   const progressionStart = Math.floor(Math.random() * 10);
-  const progressionStep = Math.floor(Math.random() * 10 + 1);
+  const progressionStep = Math.ceil(Math.random() * 10);
   const progression = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
