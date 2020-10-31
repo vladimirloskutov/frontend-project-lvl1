@@ -1,5 +1,5 @@
-import greeting from './cli.js';
 import promptly from 'promptly';
+import greeting from './cli.js';
 
 const roundsNumber = 3;
 

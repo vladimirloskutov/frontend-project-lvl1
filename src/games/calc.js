@@ -28,7 +28,7 @@ const run = async () => {
     return [question, String(correctAnswer)];
   };
 
-  return  runGame(description, getGameData);
+  return runGame(description, getGameData);
 };
 
 export default run;
