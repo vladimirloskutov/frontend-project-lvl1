@@ -1,5 +1,5 @@
 import promptly from 'promptly';
-import greeting from './cli.js';
+import greeting from '../cli.js';
 
 const calc = (number1, number2, operation) => {
   switch (operation) {

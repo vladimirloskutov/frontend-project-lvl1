@@ -1,5 +1,5 @@
 import promptly from 'promptly';
-import greeting from './cli.js';
+import greeting from '../cli.js';
 
 const isEven = (number) => number % 2 === 0;
 
