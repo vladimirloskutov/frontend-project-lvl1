@@ -1,13 +1,13 @@
 import promptly from 'promptly';
 import greeting from './cli.js';
 
-const roundsNumber = 3;
+const roundsCount = 3;
 
 export default async (description, getGameData) => {
   const name = await greeting();
   console.log(description);
 
-  for (let i = 1; i <= roundsNumber; i += 1) {
+  for (let i = 1; i <= roundsCount; i += 1) {
     const [question, correctAnswer] = getGameData();
 
     console.log(`Question: ${question}`);
