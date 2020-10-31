@@ -9,3 +9,6 @@ Brain Calc
 
 Brain Gcd
 [![asciicast](https://asciinema.org/a/369415.svg)](https://asciinema.org/a/369415)
+
+Brain Progression
+[![asciicast](https://asciinema.org/a/369438.svg)](https://asciinema.org/a/369438)
