@@ -14,17 +14,15 @@ const isPrime = (number) => {
   return true;
 };
 
+const getGameData = () => {
+  const question = Math.floor(Math.random() * 10);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
+
+  return [question, String(correctAnswer)];
+};
+
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const run = async () => {
-  const getGameData = () => {
-    const question = Math.floor(Math.random() * 10);
-    const correctAnswer = isPrime(question) ? 'yes' : 'no';
-
-    return [question, String(correctAnswer)];
-  };
-
-  return runGame(description, getGameData);
-};
+const run = () => runGame(description, getGameData);
 
 export default run;

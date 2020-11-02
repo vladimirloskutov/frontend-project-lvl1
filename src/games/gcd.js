@@ -15,20 +15,18 @@ const gcd = (number1, number2) => {
   return firstNumber;
 };
 
+const getGameData = () => {
+  const firstNumber = Math.ceil(Math.random() * 10);
+  const secondNumber = Math.ceil(Math.random() * 10);
+
+  const question = `${firstNumber} ${secondNumber}`;
+  const correctAnswer = gcd(firstNumber, secondNumber);
+
+  return [question, String(correctAnswer)];
+};
+
 const description = 'Find the greatest common divisor of given numbers.';
 
-const run = async () => {
-  const getGameData = () => {
-    const firstNumber = Math.ceil(Math.random() * 10);
-    const secondNumber = Math.ceil(Math.random() * 10);
-
-    const question = `${firstNumber} ${secondNumber}`;
-    const correctAnswer = gcd(firstNumber, secondNumber);
-
-    return [question, String(correctAnswer)];
-  };
-
-  return runGame(description, getGameData);
-};
+const run = () => runGame(description, getGameData);
 
 export default run;
