@@ -1,12 +1,10 @@
 import runGame from '../index.js';
 import { getRandomNumber, getRandomIndex } from '../utilities.js';
 
-const getProgression = (progressionStart, progressionStep) => {
-  const progressionLength = 10;
+const getProgression = (start, step, length) => {
   const progression = [];
-
-  for (let i = 0; i < progressionLength; i += 1) {
-    progression.push(progressionStart + progressionStep * i);
+  for (let i = 0; i < length; i += 1) {
+    progression.push(start + step * i);
   }
 
   return progression;
@@ -15,7 +13,8 @@ const getProgression = (progressionStart, progressionStep) => {
 const getGameData = () => {
   const progressionStart = getRandomNumber();
   const progressionStep = getRandomNumber();
-  const progression = getProgression(progressionStart, progressionStep);
+  const progressionLength = 10;
+  const progression = getProgression(progressionStart, progressionStep, progressionLength);
 
   const secretElementIndex = getRandomIndex(progression);
   const correctAnswer = progression[secretElementIndex];
