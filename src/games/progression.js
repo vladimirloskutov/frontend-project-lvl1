@@ -13,9 +13,9 @@ const getProgression = () => {
   return progression;
 };
 
-const run = async () => {
-  const description = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
+const run = async () => {
   const getGameData = () => {
     const progression = getProgression();
 

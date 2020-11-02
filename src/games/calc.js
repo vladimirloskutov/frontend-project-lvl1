@@ -13,10 +13,10 @@ const calc = (number1, number2, operation) => {
   }
 };
 
-const run = async () => {
-  const description = 'What is the result of the expression?';
-  const operations = ['+', '-', '*'];
+const description = 'What is the result of the expression?';
+const operations = ['+', '-', '*'];
 
+const run = async () => {
   const getGameData = () => {
     const firstNumber = Math.floor(Math.random() * 10);
     const secondNumber = Math.floor(Math.random() * 10);

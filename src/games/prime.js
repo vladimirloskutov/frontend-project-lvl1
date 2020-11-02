@@ -14,9 +14,9 @@ const isPrime = (number) => {
   return true;
 };
 
-const run = async () => {
-  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
+const run = async () => {
   const getGameData = () => {
     const question = Math.floor(Math.random() * 10);
     const correctAnswer = isPrime(question) ? 'yes' : 'no';

@@ -17,9 +17,9 @@ const gcd = (number1, number2) => {
   // как в этом случае правильно сделать?
 };
 
-const run = async () => {
-  const description = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
+const run = async () => {
   const getGameData = () => {
     const firstNumber = Math.ceil(Math.random() * 10);
     const secondNumber = Math.ceil(Math.random() * 10);
