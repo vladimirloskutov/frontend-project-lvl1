@@ -1,4 +1,5 @@
 import runGame from '../index.js';
+import { getRandomNumber } from '../utilities.js';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -15,7 +16,7 @@ const isPrime = (number) => {
 };
 
 const getGameData = () => {
-  const question = Math.floor(Math.random() * 10);
+  const question = getRandomNumber();
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
   return [question, String(correctAnswer)];

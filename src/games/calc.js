@@ -1,4 +1,5 @@
 import runGame from '../index.js';
+import { getRandomNumber, getRandomIndex } from '../utilities.js';
 
 const calc = (number1, number2, operation) => {
   switch (operation) {
@@ -16,9 +17,9 @@ const calc = (number1, number2, operation) => {
 const operations = ['+', '-', '*'];
 
 const getGameData = () => {
-  const firstNumber = Math.floor(Math.random() * 10);
-  const secondNumber = Math.floor(Math.random() * 10);
-  const operation = operations[Math.floor(Math.random() * operations.length)];
+  const firstNumber = getRandomNumber();
+  const secondNumber = getRandomNumber();
+  const operation = operations[getRandomIndex(operations)];
 
   const question = `${firstNumber} ${operation} ${secondNumber}`;
   const correctAnswer = calc(firstNumber, secondNumber, operation);

@@ -1,4 +1,5 @@
 import runGame from '../index.js';
+import { getRandomNumber } from '../utilities.js';
 
 const gcd = (number1, number2) => {
   let firstNumber = number1;
@@ -16,8 +17,8 @@ const gcd = (number1, number2) => {
 };
 
 const getGameData = () => {
-  const firstNumber = Math.ceil(Math.random() * 10);
-  const secondNumber = Math.ceil(Math.random() * 10);
+  const firstNumber = getRandomNumber();
+  const secondNumber = getRandomNumber();
 
   const question = `${firstNumber} ${secondNumber}`;
   const correctAnswer = gcd(firstNumber, secondNumber);

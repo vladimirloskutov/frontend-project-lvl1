@@ -1,4 +1,5 @@
 import runGame from '../index.js';
+import { getRandomNumber, getRandomIndex } from '../utilities.js';
 
 const getProgression = (progressionStart, progressionStep) => {
   const progressionLength = 10;
@@ -12,11 +13,11 @@ const getProgression = (progressionStart, progressionStep) => {
 };
 
 const getGameData = () => {
-  const progressionStart = Math.floor(Math.random() * 10);
-  const progressionStep = Math.ceil(Math.random() * 10);
+  const progressionStart = getRandomNumber();
+  const progressionStep = getRandomNumber();
   const progression = getProgression(progressionStart, progressionStep);
 
-  const secretElementIndex = Math.floor(Math.random() * progression.length);
+  const secretElementIndex = getRandomIndex(progression);
   const correctAnswer = progression[secretElementIndex];
   progression[secretElementIndex] = '..';
   const question = progression.join(' ');
