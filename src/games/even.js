@@ -1,10 +1,10 @@
 import runGame from '../index.js';
-import getRandomNumber from '../utilities.js';
+import getRandomFromRange from '../utilities.js';
 
 const isEven = (number) => number % 2 === 0;
 
 const getGameData = () => {
-  const question = getRandomNumber();
+  const question = getRandomFromRange(1, 100);
   const correctAnswer = isEven(question) ? 'yes' : 'no';
 
   return [question, String(correctAnswer)];

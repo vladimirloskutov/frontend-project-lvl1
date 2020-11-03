@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import getRandomNumber from '../utilities.js';
+import getRandomFromRange from '../utilities.js';
 
 const isPrime = (number) => {
   if (number < 2) {
@@ -16,7 +16,7 @@ const isPrime = (number) => {
 };
 
 const getGameData = () => {
-  const question = getRandomNumber();
+  const question = getRandomFromRange(1, 100);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
   return [question, String(correctAnswer)];
