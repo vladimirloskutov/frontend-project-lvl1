@@ -7,7 +7,7 @@ export default async (description, getGameData) => {
 
   console.log('May I have your name?');
   const name = await promptly.prompt('Name: ');
-  console.log(`Hello, ${name}!\n`);
+  console.log(`Hello, ${name}!`);
 
   console.log(description);
 
