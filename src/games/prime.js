@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import { getRandomNumber } from '../utilities.js';
+import getRandomNumber from '../utilities.js';
 
 const isPrime = (number) => {
   if (number < 2) {

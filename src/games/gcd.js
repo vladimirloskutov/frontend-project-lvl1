@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import { getRandomNumber } from '../utilities.js';
+import getRandomNumber from '../utilities.js';
 
 const gcd = (number1, number2) => {
   if (number2 === 0) {
