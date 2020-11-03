@@ -1,3 +1,3 @@
-export const getRandomNumber = () => Math.ceil(Math.random() * 10);
+const getRandomNumber = (min = 1, max = 10) => Math.floor(Math.random() * max + min - min);
 
-export const getRandomIndex = (array) => Math.floor(Math.random() * array.length);
+export default getRandomNumber;
