@@ -2,9 +2,11 @@ import runGame from '../index.js';
 import { getRandomNumber } from '../utilities.js';
 
 const gcd = (number1, number2) => {
-  const divisor = number2 === 0 ? Math.abs(number1) : gcd(number2, number1 % number2);
+  if (number2 === 0) {
+    return Math.abs(number1);
+  }
 
-  return divisor;
+  return gcd(number2, number1 % number2);
 };
 
 const getGameData = () => {
