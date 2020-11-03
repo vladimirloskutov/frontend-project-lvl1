@@ -10,10 +10,11 @@ const getProgression = (start, step, length) => {
   return progression;
 };
 
+const progressionLength = 10;
+
 const getGameData = () => {
   const progressionStart = getRandomNumber();
   const progressionStep = getRandomNumber();
-  const progressionLength = 10;
   const progression = getProgression(progressionStart, progressionStep, progressionLength);
 
   const secretElementIndex = getRandomIndex(progression);
